@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="gb2312" standalone="no" ?>
+<!DOCTYPE family SYSTEM "family.dtd">
+<?xml-stylesheet type="text/xsl" href="family.xsl" ?>
+<family>
+	<row>
+		<u_id>1</u_id>
+		<u_name>admin</u_name>
+		<u_pwd>123456</u_pwd>
+	</row>
+	<row>
+		<u_id>2</u_id>
+		<u_name>Peter</u_name>
+		<u_pwd>654321</u_pwd>
+	</row>
+	<row>
+		<u_id>3</u_id>
+		<u_name>Mary</u_name>
+		<u_pwd>111111</u_pwd>
+	</row>
+</family>

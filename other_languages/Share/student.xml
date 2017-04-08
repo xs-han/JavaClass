@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="gb2312" standalone="no"?>
+<!DOCTYPE student SYSTEM "student.dtd">
+<?xml-stylesheet type="text/xsl" href="student.xsl" ?>
+<student>
+    <row>
+        <id>01</id>
+        <name>张三丰</name>
+        <score>588.88</score>
+   </row>
+    <row>
+        <id>02</id>
+        <name>霍元甲</name>
+        <score>578.88</score>
+   </row>
+    <row>
+        <id>01</id>
+        <name>李小龙</name>
+        <score>558.88</score>
+   </row>
+    <row>
+        <id>04</id>
+        <name>张三丰</name>
+        <score>588.88</score>
+   </row>
+    <row>
+        <id>05</id>
+        <name>霍元甲</name>
+        <score>578.88</score>
+   </row>
+    <row>
+        <id>06</id>
+        <name>李小龙</name>
+        <score>558.88</score>
+   </row>
+    <row>
+        <id>07</id>
+        <name>张三丰</name>
+        <score>588.88</score>
+   </row>
+    <row>
+        <id>08</id>
+        <name>霍元甲</name>
+        <score>578.88</score>
+   </row>
+    <row>
+        <id>09</id>
+        <name>李小龙</name>
+        <score>558.88</score>
+   </row>
+</student>

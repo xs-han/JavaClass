@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!ELEMENT family (row+)> <!-- + means at least one row exists -->
+<!ELEMENT row (u_id,u_name,u_pwd)>
+<!ELEMENT u_id (#PCDATA)>
+<!ELEMENT u_name (#PCDATA)>
+<!ELEMENT u_pwd (#PCDATA)>
