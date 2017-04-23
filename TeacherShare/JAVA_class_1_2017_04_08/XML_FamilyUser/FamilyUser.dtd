@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT FamilyUser (row+)>
+<!ELEMENT row (u_id,u_name,u_pwd,u_memo)>
+<!ELEMENT u_id (#PCDATA)>
+<!ELEMENT u_name (#PCDATA)>
+<!ELEMENT u_pwd (#PCDATA)>
+<!ELEMENT u_memo (#PCDATA)>

@@ -1,0 +1,13 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!ELEMENT student (row+)>
+<!ELEMENT row (sid,sname,sage,smobile,semail,saddress)>
+<!ELEMENT sid (#PCDATA)>
+<!ELEMENT sname (#PCDATA)>
+<!ELEMENT sage (#PCDATA)>
+<!ELEMENT smobile (#PCDATA)>
+<!ELEMENT semail (#PCDATA)>
+<!ELEMENT saddress (#PCDATA)>
+
+
+
+

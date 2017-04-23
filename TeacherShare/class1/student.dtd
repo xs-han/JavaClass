@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="GB2312"   ?>
-<!ELEMENT student (row+)>
-<!ELEMENT row (id,name,score)>
-<!ELEMENT id (#PCDATA)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT score (#PCDATA)>
