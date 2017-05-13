@@ -1,0 +1,47 @@
+﻿<HTML>
+  <HEAD>
+    <TITLE>王者荣耀登录系统</TITLE>
+    <STYLE type="text/css">
+       div {position:absolute;left:60px;top:150px;}
+       caption {font-family:微软雅黑;font-size:24pt;color:#3FAB2C;}
+       .ts {font-family:华文中宋;font-size:15pt;color:purple;}
+       #bs {font-family:华文中宋;font-size:14pt;color:blue;}
+    </STYLE>
+  </HEAD>
+  <BODY background="empirehonor2.jpg">
+   <FORM name="frmLogin" method="post" action="index.htm">
+
+     <DIV>
+       <MARQUEE>
+        <TABLE border="30" width="480" bgcolor="yellow">
+          <CAPTION>          
+                王者荣耀登录系统
+         </CAPTION>
+          <TR align="center">
+              <TH class="ts">用户名：</TH>
+              <TH colspan="2"><INPUT name="txtUname" type="text" maxlength="20"></TH>
+          </TR>
+          <TR align="center">
+              <TH class="ts">密&nbsp;&nbsp;码：</TH>
+              <TH  colspan="2"><INPUT name="txtPwd1" type="password" maxlength="20"></TH>
+          </TR>
+          <TR align="center">
+              <TH class="ts">密码确认：</TH>
+              <TH colspan="2"><INPUT name="txtPwd2" type="password" maxlength="20"></TH>
+          </TR>
+          <TR align="center">
+              <TH class="ts">验证码：</TH>
+              <TH><INPUT name="txtCheckCode" type="text" maxlength="20"></TH>
+              <TH><IMG src="checkCode.jpg" width="110" height="40"></TH>
+          </TR>
+          <TR align="center">
+              <TH><INPUT  id="bs" name="cmdLogin" type="submit" value="登录"></TH>
+              <TH><INPUT  id="bs" name="cmdCancel" type="reset" value="取消"></TH>
+              <TH><INPUT  id="bs" name="cmdRegister" type="button" value="新用户注册"></TH>
+          </TR>
+        </TABLE>
+       </MARQUEE>
+     </DIV>
+  </FORM>
+  </BODY>
+</HTML>
