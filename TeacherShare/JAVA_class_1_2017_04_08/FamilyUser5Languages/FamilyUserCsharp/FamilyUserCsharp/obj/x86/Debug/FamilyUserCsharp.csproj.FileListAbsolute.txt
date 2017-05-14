@@ -1,5 +1,0 @@
-d:\FamilyUserCsharp\FamilyUserCsharp\bin\Debug\FamilyUserCsharp.exe
-d:\FamilyUserCsharp\FamilyUserCsharp\bin\Debug\FamilyUserCsharp.pdb
-d:\FamilyUserCsharp\FamilyUserCsharp\obj\x86\Debug\ResolveAssemblyReference.cache
-d:\FamilyUserCsharp\FamilyUserCsharp\obj\x86\Debug\FamilyUserCsharp.exe
-d:\FamilyUserCsharp\FamilyUserCsharp\obj\x86\Debug\FamilyUserCsharp.pdb
