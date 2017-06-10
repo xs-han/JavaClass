@@ -13,8 +13,7 @@ public class MainPanel extends JPanel{
 			new GridLayout(4,2,5,5),new FlowLayout(FlowLayout.CENTER,5,5) };
 	String [] locMain = {"North", "Center", "South"};
 	Color [] cl = {Color.pink, Color.green, Color.yellow, Color.red};
-	
-	MyEvent me = new MyEvent(pnl[2].jb3, pnl[1],tfText);
+
 	public MainPanel(){
 		this.setBackground(Color.PINK);
 		this.setLayout(layout[0]);

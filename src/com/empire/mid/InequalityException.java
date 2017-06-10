@@ -1,13 +1,12 @@
 package com.empire.mid;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-import java.util.*;
-
-import com.empire.gui.*;
-
-public class InequalityException {
-
+class InequalityException extends EmptyException{
+	private String message;
+	public InequalityException(String s1, String s2){
+		super("");
+		message = s1 + " 和 " + s2 + "不一致";
+	}
+	public String OutMessage(){
+		return message;
+	}
 }

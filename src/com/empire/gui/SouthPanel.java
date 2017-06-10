@@ -16,4 +16,8 @@ public class SouthPanel extends JPanel{
 			this.add(jb3[i]);
 		}
 	}
+	
+	public JButton [] getJb3(){
+		return jb3;
+	}
 }

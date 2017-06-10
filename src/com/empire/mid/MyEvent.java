@@ -1,83 +1,53 @@
 package com.empire.mid;
 
-import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
-
-import java.util.*;
 import com.empire.gui.*;
 
 public class MyEvent implements ActionListener{
 	
 	JButton [] jb3;
 	JTextField [] jtf;
+	String [] jlb; 
 	String [] data;
 	
 	public MyEvent(){
 		jb3 = null;
-		tfText = null;
+		jtf = null;
+		data = null;
+		jlb = null;
 	}
 	
-	public MyEvent(JButton [] jb, JTextField [] tfText){
+	public MyEvent(JTextField [] tfText, JButton [] jb, String [] lb){
 		jb3 = jb;
 		jtf = tfText;
-	}
-	
-	@Override
-	public void actionPerformed(ActionEvent ae) {
-		// TODO Auto-generated method stub
-		try{
-			if(ae.getSource() == jb[0]){
-				getInfo();
-				judgeNull();
-				judgeEquality();
-				judge();
-			}
-			else if(ae.getSource() == jb[1]){
-				clear();
-			}
-			else{
-				callRegWin();
-				this.setVisible(true);
-			}
-		}catch(MyException myex){
-			JOptionPane.showMessageDialog(null, myex.OutMessage(), 
-					"不能为空", JOptionPane.ERROR_MESSAGE);
-//		}catch(InequalityException ieex){
-//			JOptionPane.showMessageDialog(null, ieex.OutMessage(), 
-//					"不能为空", JOptionPane.ERROR_MESSAGE);
-		}catch(Exception ex){
-			JOptionPane.showMessageDialog(null, ex.getMessage(), 
-					"不能为空", JOptionPane.ERROR_MESSAGE);
+		jlb = lb;
+		for(int i = 0; i < jb.length; i++){
+			jb3[i].addActionListener(this);
 		}
-		System.out.println("test");
-	}
-	public void callRegWin(){
-		rw.setTitle("注册窗口");
-		rw.setBounds(600,600,300,200);
-		rw.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		rw.setVisible(true);
+		data = new String[tfText.length];
 	}
 	
-	public void clear(){
-		for(int i=0;i<jtf.length;i++){
-			jtf[i].setText("");
-		}
-	}
-	
-	public void judgeNull() throws MyException{
+
+	public void judgeNull() throws EmptyException{
 		for(int i = 0; i < data.length; i++){
 			if(data[i].equals("")){
-				throw new MyException(jlText[i] + "不能为空。");
+				if(i != data.length-1){
+					throw new EmptyException(jlb[i] + "不能为空。");
+				}
+				else {
+					throw new EmptyException("验证码" + "不能为空。");
+				}
 			}
+		}
+		if(!data[3].toLowerCase().equals("uwv6")){
+			throw new EmptyException("验证码不正确");
 		}
 	}
 	
 	public void judgeEquality() throws InequalityException{
 		if(!data[1].equals(data[2])){
-			throw new InequalityException(jlText[1].substring(0, jlText[1].length()-1),
-					jlText[2].substring(0, jlText[2].length()-1));
+			throw new InequalityException(jlb[1],jlb[2]);
 		}
 	}
 	
@@ -92,7 +62,50 @@ public class MyEvent implements ActionListener{
 		}
 	}
 	
-
+	public void clear(){
+		for(int i=0;i<jtf.length;i++){
+			jtf[i].setText("");
+		}
+	}
 	
-
+	public void getInfo(){
+		for(int i=0;i<jtf.length;i++){
+			data[i] = jtf[i].getText().trim();
+		}
+	}
+	
+	public void callRegWin(){
+		RegWindow rw = new RegWindow();
+		rw.setTitle("注册窗口");
+		rw.setBounds(600,600,300,200);
+		rw.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		rw.setVisible(true);
+	}
+	@Override
+	public void actionPerformed(ActionEvent ae) {
+		// TODO Auto-generated method stub
+		try{
+			if(ae.getSource() == jb3[0]){
+				getInfo();
+				judgeNull();
+				judgeEquality();
+				judge();
+			}
+			else if(ae.getSource() == jb3[1]){
+				clear();
+			}
+			else{
+				callRegWin();
+			}
+		}catch(EmptyException myex){
+			JOptionPane.showMessageDialog(null, myex.OutMessage(), 
+					"不能为空", JOptionPane.ERROR_MESSAGE);
+//		}catch(InequalityException ieex){
+//			JOptionPane.showMessageDialog(null, ieex.OutMessage(), 
+//					"不能为空", JOptionPane.ERROR_MESSAGE);
+		}catch(Exception ex){
+			JOptionPane.showMessageDialog(null, ex.getMessage(), 
+					"不能为空", JOptionPane.ERROR_MESSAGE);
+		}
+	}
 }

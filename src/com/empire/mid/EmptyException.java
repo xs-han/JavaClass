@@ -1,13 +1,12 @@
 package com.empire.mid;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-import java.util.*;
-
-import com.empire.gui.*;
-
-public class EmptyException {
-
+public class EmptyException extends Exception {
+	private String message;
+	public EmptyException(String mess){
+		message = mess;
+	}
+	
+	public String OutMessage(){
+		return message;
+	}
 }
